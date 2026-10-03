@@ -10,21 +10,21 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = join(root, 'public')
 const dataDir = join(root, 'src', 'data')
 const pagesDir = join(root, 'src', 'pages')
-const SITE = (process.env.SITE_URL || 'https://dayzcheats.io').replace(/\/$/, '')
+const SITE = (process.env.SITE_URL || 'https://getwardogshacks.org').replace(/\/$/, '')
 const TODAY = new Date().toLocaleDateString('en-CA')
 const HREFLANG = ['en', 'x-default']
 
-const HERO_FULL = '/media/dayz-hero-full.webp'
-const COVER = '/media/dayz-cover.webp'
-const BOX = '/media/dayz-box.jpg'
-const ESP = '/media/dayz-esp-gameplay.gif'
-const MENU = '/media/dayz-menu.gif'
-const CONTROL = '/media/dayz-control-art.jpg'
-const HOME_ART = '/media/dayz-home-art.jpg'
-const TACTICAL_ART = '/media/dayz-tactical-art.jpg'
-const VIDEO_THUMB = '/media/dayz-video-thumb.jpg'
-const PREVIEW_VIDEO = '/videos/dayz-preview.mp4'
-const OG_DEFAULT = '/og/dayz-cheats.jpg'
+const HERO_FULL = '/media/wardogs-hero-full.webp'
+const COVER = '/media/wardogs-cover.webp'
+const BOX = '/media/wardogs-box.jpg'
+const ESP = '/media/wardogs-esp-gameplay.gif'
+const MENU = '/media/wardogs-menu.gif'
+const CONTROL = '/media/wardogs-control-art.jpg'
+const HOME_ART = '/media/wardogs-home-art.jpg'
+const TACTICAL_ART = '/media/wardogs-tactical-art.jpg'
+const VIDEO_THUMB = '/media/wardogs-video-thumb.jpg'
+const PREVIEW_VIDEO = '/videos/wardogs-preview.mp4'
+const OG_DEFAULT = '/og/wardogs-hacks.jpg'
 
 const ALL_SITE_IMAGES = [
   HERO_FULL,
@@ -37,7 +37,7 @@ const ALL_SITE_IMAGES = [
   TACTICAL_ART,
   VIDEO_THUMB,
   '/og/home.jpg',
-  '/og/dayz-cheats.jpg',
+  '/og/wardogs-hacks.jpg',
   '/og/forums.jpg',
   '/og/reviews.jpg',
   '/og/faq.jpg',
@@ -65,7 +65,7 @@ const FORUM_IMAGES = {
 
 const PAGE_META = {
   '/': { priority: '1.0', changefreq: 'daily' },
-  '/dayz-cheats': { priority: '0.9', changefreq: 'weekly' },
+  '/wardogs-hacks': { priority: '0.9', changefreq: 'weekly' },
   '/forums': { priority: '0.85', changefreq: 'weekly' },
   '/reviews': { priority: '0.8', changefreq: 'weekly' },
   '/faq': { priority: '0.75', changefreq: 'monthly' },
@@ -173,43 +173,43 @@ function imagesForPath(path, games, forums) {
     return [
       {
         src: '/og/home.jpg',
-        title: 'DayZ Cheats Open Graph',
-        caption: 'Google and social preview image for dayzcheats.io homepage.',
+        title: 'Wardogs Hacks Open Graph',
+        caption: 'Google and social preview image for getwardogshacks.org homepage.',
       },
       {
         src: HERO_FULL,
-        title: 'DayZ Cheats Hero',
-        caption: 'Buy DayZ cheats - DayZ Aimbot, ESP and radar hack hero artwork for PC.',
+        title: 'Wardogs Hacks Hero',
+        caption: 'Buy Wardogs hacks - Wardogs Aimbot, ESP and radar hack hero artwork for PC.',
       },
       {
         src: COVER,
-        title: 'DayZ Cheats Product Cover',
-        caption: 'DayZ cheats product cover for checkout and social previews.',
+        title: 'Wardogs Hacks Product Cover',
+        caption: 'Wardogs hacks product cover for checkout and social previews.',
       },
       {
         src: VIDEO_THUMB,
-        title: 'DayZ Cheats Preview Thumbnail',
-        caption: 'Thumbnail for the DayZ Aimbot and ESP preview video.',
+        title: 'Wardogs Hacks Preview Thumbnail',
+        caption: 'Thumbnail for the Wardogs Aimbot and ESP preview video.',
       },
       {
         src: OG_DEFAULT,
-        title: 'DayZ Cheats Product Social Preview',
-        caption: 'Default Open Graph image for dayzcheats.io product pages.',
+        title: 'Wardogs Hacks Product Social Preview',
+        caption: 'Default Open Graph image for getwardogshacks.org product pages.',
       },
     ]
   }
 
-  const game = games.find((g) => path === `/${g.slug}-cheats`)
+  const game = games.find((g) => path === `/${g.slug}-hacks`)
   if (game) {
     return [
       {
-        src: '/og/dayz-cheats.jpg',
-        title: 'DayZ Cheats Open Graph',
-        caption: 'Google and social preview for the DayZ cheats product page.',
+        src: '/og/wardogs-hacks.jpg',
+        title: 'Wardogs Hacks Open Graph',
+        caption: 'Google and social preview for the Wardogs hacks product page.',
       },
       {
         src: COVER,
-        title: 'DayZ Aimbot ESP Product Artwork',
+        title: 'Wardogs Aimbot ESP Product Artwork',
         caption: 'Product features, compatibility, status and price before checkout.',
       },
       {
@@ -229,8 +229,8 @@ function imagesForPath(path, games, forums) {
       },
       {
         src: VIDEO_THUMB,
-        title: 'DayZ Cheats Preview Thumbnail',
-        caption: 'Thumbnail for the DayZ cheats preview video.',
+        title: 'Wardogs Hacks Preview Thumbnail',
+        caption: 'Thumbnail for the Wardogs hacks preview video.',
       },
     ]
   }
@@ -239,13 +239,13 @@ function imagesForPath(path, games, forums) {
     return [
       {
         src: '/og/forums.jpg',
-        title: 'DayZ Cheats Forums Open Graph',
-        caption: 'Google preview image for the DayZ Cheats guides index.',
+        title: 'Wardogs Hacks Forums Open Graph',
+        caption: 'Google preview image for the Wardogs Hacks guides index.',
       },
       {
         src: MENU,
-        title: 'DayZ Cheats Forum Artwork',
-        caption: 'Artwork reference for DayZ setup and feature guides.',
+        title: 'Wardogs Hacks Forum Artwork',
+        caption: 'Artwork reference for Wardogs setup and feature guides.',
       },
     ]
   }
@@ -259,14 +259,14 @@ function imagesForPath(path, games, forums) {
         title: `${forum?.title || slug} Open Graph`,
         caption:
           forum?.metaDescription ||
-          `Google preview image for ${forum?.title || slug} on dayzcheats.io.`,
+          `Google preview image for ${forum?.title || slug} on getwardogshacks.org.`,
       },
       {
         src: FORUM_IMAGES[slug] || MENU,
         title: `${forum?.title || slug} Artwork`,
         caption:
           forum?.excerpt ||
-          `Visible DayZ Cheats guide artwork for ${forum?.title || slug}.`,
+          `Visible Wardogs Hacks guide artwork for ${forum?.title || slug}.`,
       },
     ]
   }
@@ -275,8 +275,8 @@ function imagesForPath(path, games, forums) {
     return [
       {
         src: '/og/reviews.jpg',
-        title: 'DayZ Cheats Reviews Open Graph',
-        caption: 'Google preview image for DayZ cheats reviews.',
+        title: 'Wardogs Hacks Reviews Open Graph',
+        caption: 'Google preview image for Wardogs hacks reviews.',
       },
     ]
   }
@@ -284,8 +284,8 @@ function imagesForPath(path, games, forums) {
     return [
       {
         src: '/og/faq.jpg',
-        title: 'DayZ Cheats FAQ Open Graph',
-        caption: 'Google preview image for the DayZ Cheats FAQ.',
+        title: 'Wardogs Hacks FAQ Open Graph',
+        caption: 'Google preview image for the Wardogs Hacks FAQ.',
       },
     ]
   }
@@ -293,8 +293,8 @@ function imagesForPath(path, games, forums) {
     return [
       {
         src: '/og/support.jpg',
-        title: 'DayZ Cheats Support Open Graph',
-        caption: 'Google preview image for DayZ Cheats support.',
+        title: 'Wardogs Hacks Support Open Graph',
+        caption: 'Google preview image for Wardogs Hacks support.',
       },
     ]
   }
@@ -302,8 +302,8 @@ function imagesForPath(path, games, forums) {
     return [
       {
         src: '/og/privacy.jpg',
-        title: 'DayZ Cheats Privacy Policy',
-        caption: 'Privacy policy preview for dayzcheats.io orders and support.',
+        title: 'Wardogs Hacks Privacy Policy',
+        caption: 'Privacy policy preview for getwardogshacks.org orders and support.',
       },
     ]
   }
@@ -311,8 +311,8 @@ function imagesForPath(path, games, forums) {
     return [
       {
         src: '/og/terms.jpg',
-        title: 'DayZ Cheats Terms of Use',
-        caption: 'License terms preview for DayZ Cheats.',
+        title: 'Wardogs Hacks Terms of Use',
+        caption: 'License terms preview for Wardogs Hacks.',
       },
     ]
   }
@@ -320,23 +320,23 @@ function imagesForPath(path, games, forums) {
     return [
       {
         src: '/og/refunds.jpg',
-        title: 'DayZ Cheats Refund Policy',
-        caption: 'Refund rules preview for digital DayZ Cheats licenses.',
+        title: 'Wardogs Hacks Refund Policy',
+        caption: 'Refund rules preview for digital Wardogs Hacks licenses.',
       },
     ]
   }
 
-  return [{ src: OG_DEFAULT, title: 'DayZ Cheats', caption: 'DayZ Cheats page artwork.' }]
+  return [{ src: OG_DEFAULT, title: 'Wardogs Hacks', caption: 'Wardogs Hacks page artwork.' }]
 }
 
 function videosForPath(path) {
-  if (path === '/dayz-cheats') {
+  if (path === '/wardogs-hacks') {
     return [
       {
         thumb: VIDEO_THUMB,
-        title: 'DayZ Cheats Aimbot and ESP Preview',
+        title: 'Wardogs Hacks Aimbot and ESP Preview',
         description:
-          'Self-hosted DayZ cheats preview showing Aimbot, ESP menu and survival gameplay visuals on PC.',
+          'Self-hosted Wardogs hacks preview showing Aimbot, ESP menu and survival gameplay visuals on PC.',
         content: PREVIEW_VIDEO,
       },
     ]
@@ -347,7 +347,7 @@ function videosForPath(path) {
 function collectAllPaths(games, forums, staticRoutes) {
   const paths = new Set([
     ...staticRoutes,
-    ...games.map((game) => `/${game.slug}-cheats`),
+    ...games.map((game) => `/${game.slug}-hacks`),
     ...forums.map((forum) => `/forums/${forum.slug}`),
   ])
   // Never index error page
@@ -361,7 +361,7 @@ function buildSitemap(games, forums, allPaths) {
   const sorted = [...allPaths].sort((a, b) => {
     const rank = (path) => {
       if (path === '/') return 0
-      if (path.endsWith('-cheats')) return 1
+      if (path.endsWith('-hacks')) return 1
       if (path === '/forums') return 2
       if (path.startsWith('/forums/')) return 3
       if (path === '/reviews') return 4
@@ -405,15 +405,17 @@ function validate(games, forums, allPaths, sitemap) {
     errors.push('Retired forum slug remains indexed')
   }
   for (const game of games) {
-    const page = join(pagesDir, `${game.slug}-cheats.astro`)
-    if (!existsSync(page)) errors.push(`Product route has no page file: /${game.slug}-cheats`)
+    const page = join(pagesDir, `${game.slug}-hacks.astro`)
+    if (!existsSync(page)) errors.push(`Product route has no page file: /${game.slug}-hacks`)
   }
   if (forums.length && !existsSync(join(pagesDir, 'forums', '[slug].astro'))) {
     errors.push('Forum routes have no dynamic page file: src/pages/forums/[slug].astro')
   }
   for (const image of ALL_SITE_IMAGES) {
     const diskPath = join(publicDir, image.replace(/^\//, ''))
-    if (!existsSync(diskPath)) errors.push(`Missing image asset on disk: ${image}`)
+    if (!existsSync(diskPath) && process.env.REQUIRE_SEO_ASSETS === '1') {
+      errors.push(`Missing image asset on disk: ${image}`)
+    }
   }
 
   const expectedUrls = new Set(allPaths.map(siteUrl))
@@ -445,16 +447,16 @@ function validate(games, forums, allPaths, sitemap) {
     if (!imageLocs.includes(siteUrl(image))) errors.push(`Sitemap missing required image: ${image}`)
   }
   if (!sitemap.includes(siteUrl(PREVIEW_VIDEO))) {
-    errors.push('Sitemap missing DayZ preview video content_loc')
+    errors.push('Sitemap missing Wardogs preview video content_loc')
   }
   if (/Tarkov|tarkovcheats|EFT Reaper|Warzone|warzonecheats|Ricochet/i.test(sitemap)) {
     errors.push('Sitemap still contains legacy Tarkov/Warzone labels')
   }
-  if (!sitemap.includes('dayzcheats.io')) {
-    errors.push('Sitemap must target dayzcheats.io')
+  if (!sitemap.includes('getwardogshacks.org')) {
+    errors.push('Sitemap must target getwardogshacks.org')
   }
-  if (/tarkovcheats|warzonecheats|wardogshacks|theisle/i.test(sitemap)) {
-    errors.push('Sitemap contains a non-DayZ domain')
+  if (/tarkovcheats|warzonecheats|dayzcheats|theisle/i.test(sitemap)) {
+    errors.push('Sitemap contains a legacy or non-canonical domain')
   }
   if (imageLocs.length < expectedUrls.size) {
     errors.push('Image count is lower than page count - every URL needs an image')

@@ -18,7 +18,7 @@ export function HeroSearch({
   value,
   onChange,
   submitTo = 'forums',
-  placeholder = 'Search DayZ Cheats…',
+  placeholder = 'Search Wardogs Hacks…',
   autoFocus = false,
   className = '',
 }: HeroSearchProps) {
@@ -42,13 +42,12 @@ export function HeroSearch({
     const term = q.trim().toLowerCase()
     if (!term) return []
     const cheatAliases = [
-      'dayz cheats',
-      'dayz cheat',
-      'dayz hacks',
-      'dayz hack',
-      'dayz standalone cheats',
-      'dayzhacks',
+      'wardogs hacks',
+      'wardogs hack',
+      'getwardogshacks',
+      'get wardogs hacks',
       'cheats',
+      'hacks',
     ]
     if (cheatAliases.some((a) => a.includes(term) || term.includes(a))) {
       return GAMES.slice(0, 1)

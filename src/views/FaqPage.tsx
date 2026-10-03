@@ -19,7 +19,7 @@ export function FaqPage() {
               {SITE_NAME}
             </p>
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-              DayZ Cheats FAQ
+              Wardogs Hacks FAQ
             </h1>
             <p className="mt-4 text-base leading-relaxed text-white/60">
               BattlEye status, ESP, Aimbot, radar hack, servers, buying, loading, support and
@@ -75,7 +75,7 @@ export function FaqPage() {
                 Support
               </a>
               <CheckoutLink className="cta-gradient inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-semibold text-white">
-                Buy DayZ Cheats
+                Buy Wardogs Hacks
               </CheckoutLink>
             </div>
           </div>

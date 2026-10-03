@@ -1,8 +1,8 @@
-# DayZ Cheats (dayzcheats.io)
+# Wardogs Hacks (getwardogshacks.org)
 
-Static Astro site for DayZ Standalone cheats — silent aim Aimbot, ESP, wallhack, loot ESP, radar hack — Cloudflare Workers ready.
+Static Astro site for Wardogs hacks — silent aim Aimbot, ESP, wallhack, loot ESP, radar hack — Cloudflare Workers ready.
 
-Worldwide English SEO targeting **dayz cheats**, **dayz hacks**, and **undetected dayz cheats**.
+Worldwide English SEO targeting **wardogs hacks**, **getwardogshacks.org**, and **undetected wardogs hacks**.
 
 ```bash
 npm install

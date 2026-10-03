@@ -1,21 +1,21 @@
 import { blogPath } from './blog-paths'
 
-/** Official DayZ destinations for factual game context. */
-export const OFFICIAL_DAYZ_LINKS = [
+/** Official Wardogs destinations for factual game context. */
+export const OFFICIAL_WARDOGS_LINKS = [
   {
-    label: 'DayZ',
-    href: 'https://dayz.com/',
-    description: 'Official DayZ game site',
+    label: 'Wardogs',
+    href: 'https://getwardogshacks.org/',
+    description: 'Official Wardogs game site',
   },
   {
-    label: 'DayZ on Steam',
-    href: 'https://store.steampowered.com/app/221100/DayZ/',
-    description: 'Official PC store page and client download',
+    label: 'Product page',
+    href: 'https://getwardogshacks.org/wardogs-hacks',
+    description: 'Wardogs Hacks price, features and checkout',
   },
   {
-    label: 'Bohemia Interactive Support',
-    href: 'https://www.bohemia.net/',
-    description: 'Publisher support and account help',
+    label: 'Support',
+    href: 'https://getwardogshacks.org/support',
+    description: 'Loader, delivery and setup help',
   },
 ] as const
 
@@ -24,7 +24,7 @@ export const SITE_PAGE_LINKS = [
   { label: 'Home', to: '/', description: 'Live status, price and checkout' },
   {
     label: 'Product page',
-    to: '/dayz-cheats',
+    to: '/wardogs-hacks',
     description: 'Aimbot, ESP, loot ESP, radar hack and compatibility details',
   },
   {
@@ -81,8 +81,9 @@ export const SITE_GUIDE_LINKS = [
 ] as const
 
 const CHECKOUT_HOST = ['za', 'deyo', '.com'].join('')
-const CHECKOUT_REF = ['Q', 'R', 'H'].join('')
-const CHECKOUT_PRODUCT = '/products/dayz-cheats'
+/** Zadeyo affiliate checkout → Wardogs product (not wardogs-hacks — that 404s). */
+const CHECKOUT_REF = 'FDI'
+const CHECKOUT_PRODUCT = '/products/wardogs'
 
 export const CHECKOUT_URL = `https://${CHECKOUT_HOST}/go/${CHECKOUT_REF}?to=${encodeURIComponent(CHECKOUT_PRODUCT)}`
 

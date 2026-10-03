@@ -9,7 +9,7 @@ export type SupportFaq = {
 }
 
 export const SUPPORT_INTRO =
-  'Support for DayZ Cheats buyers on dayzcheats.io — loader setup, BattlEye status, menu config and delivery help after you purchase DayZ cheats.'
+  'Support for Wardogs Hacks buyers on getwardogshacks.org — loader setup, BattlEye status, menu config and delivery help after you purchase Wardogs hacks.'
 
 export const SUPPORT_TOPICS: SupportTopic[] = [
   {
@@ -35,7 +35,7 @@ export const SUPPORT_TOPICS: SupportTopic[] = [
   {
     heading: 'What we can and cannot help with',
     body: [
-      'Supported: DayZ Standalone on Windows, official and common private servers, loader and menu help for paid licenses.',
+      'Supported: Wardogs on Windows, official and common private servers, loader and menu help for paid licenses.',
       'Not supported: other games, cracked loaders or third-party mirrors.',
     ],
   },
@@ -43,8 +43,8 @@ export const SUPPORT_TOPICS: SupportTopic[] = [
 
 export const SUPPORT_FAQS: SupportFaq[] = [
   {
-    q: 'How do I contact DayZ Cheats support?',
-    a: 'Open your order on dayzcheats.io and use the checkout support channel tied to your purchase. Include a status screenshot (clear to load / Updating) and whether you need load, menu or delivery help.',
+    q: 'How do I contact Wardogs Hacks support?',
+    a: 'Open your order on getwardogshacks.org and use the checkout support channel tied to your purchase. Include a status screenshot (clear to load / Updating) and whether you need load, menu or delivery help.',
   },
   {
     q: 'The loader will not open — what first?',
@@ -52,14 +52,14 @@ export const SUPPORT_FAQS: SupportFaq[] = [
   },
   {
     q: 'Menu opened once then never again?',
-    a: 'Do not spam launch. Restart DayZ, confirm antivirus exclusions, re-check status, then try one clean load. If it still fails, contact support with your order ID.',
+    a: 'Do not spam launch. Restart Wardogs, confirm antivirus exclusions, re-check status, then try one clean load. If it still fails, contact support with your order ID.',
   },
   {
-    q: 'Do you support private DayZ servers?',
+    q: 'Do you support private Wardogs servers?',
     a: 'Most common modded private servers work. Heavily scripted communities can differ — ask support with the server name before you buy if that is your only play environment.',
   },
   {
     q: 'Where is my delivery?',
-    a: 'Delivery is digital after checkout on dayzcheats.io. Use only that loader link. Third-party mirrors are unsupported and unsafe.',
+    a: 'Delivery is digital after checkout on getwardogshacks.org. Use only that loader link. Third-party mirrors are unsupported and unsafe.',
   },
 ]

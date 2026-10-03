@@ -1,11 +1,11 @@
-import { DAYZ_HERO, DAYZ_SOLDIER, DAYZ_COVER, DAYZ_MENU, DAYZ_ESP } from './media'
-import { DAYZ_OG, getOgImageForPath, PAGE_OG } from './og'
+import { WARDOGS_HERO, WARDOGS_SOLDIER, WARDOGS_COVER, WARDOGS_MENU, WARDOGS_ESP } from './media'
+import { WARDOGS_OG, getOgImageForPath, PAGE_OG } from './og'
 
-export { DAYZ_OG, getOgImageForPath, PAGE_OG }
+export { WARDOGS_OG, getOgImageForPath, PAGE_OG }
 export { forumOgImage } from './og'
 
-export const DAYZ_PRODUCT_HERO = DAYZ_HERO
-export const DAYZ_PRODUCT_COVER = DAYZ_COVER
+export const WARDOGS_PRODUCT_HERO = WARDOGS_HERO
+export const WARDOGS_PRODUCT_COVER = WARDOGS_COVER
 
 export type ImageSeoFields = {
   alt: string
@@ -21,13 +21,13 @@ export const IMAGE_SEO: Record<
     heroCaption: string
   }
 > = {
-  dayz: {
-    alt: 'DayZ cheats product artwork for DayZ Standalone on PC',
-    title: 'DayZ Cheats Product Details',
-    caption: 'DayZ Aimbot, ESP, wallhack, loot ESP, radar hack and BattlEye compatibility',
-    heroAlt: 'DayZ cheats silent aim Aimbot and ESP features',
-    heroTitle: 'DayZ Cheats Features',
-    heroCaption: 'Review DayZ Aimbot, ESP, radar hack and current BattlEye status',
+  wardogs: {
+    alt: 'Wardogs hacks product artwork for Wardogs on PC',
+    title: 'Wardogs Hacks Product Details',
+    caption: 'Wardogs Aimbot, ESP, wallhack, loot ESP, radar hack and BattlEye compatibility',
+    heroAlt: 'Wardogs hacks silent aim Aimbot and ESP features',
+    heroTitle: 'Wardogs Hacks Features',
+    heroCaption: 'Review Wardogs Aimbot, ESP, radar hack and current BattlEye status',
   },
 }
 
@@ -39,55 +39,55 @@ export const PAGE_IMAGES: Record<
   PageImage
 > = {
   home: {
-    src: DAYZ_SOLDIER,
+    src: WARDOGS_SOLDIER,
     og: PAGE_OG.home,
-    alt: 'DayZ cheats Aimbot and ESP artwork for DayZ Standalone on PC',
-    title: 'DayZ Cheats',
-    caption: 'DayZ Aimbot, ESP, wallhack and radar hack overview.',
+    alt: 'Wardogs hacks Aimbot and ESP artwork for Wardogs on PC',
+    title: 'Wardogs Hacks',
+    caption: 'Wardogs Aimbot, ESP, wallhack and radar hack overview.',
   },
   forums: {
-    src: DAYZ_HERO,
+    src: WARDOGS_HERO,
     og: PAGE_OG.forums,
-    alt: 'DayZ cheats product artwork',
-    title: 'DayZ Cheats Guides',
-    caption: 'Setup, Aimbot and ESP guides for DayZ.',
+    alt: 'Wardogs hacks product artwork',
+    title: 'Wardogs Hacks Guides',
+    caption: 'Setup, Aimbot and ESP guides for Wardogs.',
   },
   reviews: {
-    src: DAYZ_ESP,
+    src: WARDOGS_ESP,
     og: PAGE_OG.reviews,
-    alt: 'DayZ cheats review artwork',
-    title: 'DayZ Cheats Reviews',
-    caption: 'Feature and compatibility feedback for DayZ Standalone.',
+    alt: 'Wardogs hacks review artwork',
+    title: 'Wardogs Hacks Reviews',
+    caption: 'Feature and compatibility feedback for Wardogs.',
   },
   faq: {
-    src: DAYZ_MENU,
+    src: WARDOGS_MENU,
     og: PAGE_OG.faq,
-    alt: 'DayZ cheats FAQ artwork',
-    title: 'DayZ Cheats FAQ',
-    caption: 'Compatibility, feature and setup answers for DayZ.',
+    alt: 'Wardogs hacks FAQ artwork',
+    title: 'Wardogs Hacks FAQ',
+    caption: 'Compatibility, feature and setup answers for Wardogs.',
   },
   support: {
-    src: DAYZ_HERO,
+    src: WARDOGS_HERO,
     og: PAGE_OG.support,
-    alt: 'DayZ cheats support artwork',
-    title: 'DayZ Cheats Support',
-    caption: 'Delivery, loader and setup support for DayZ cheats.',
+    alt: 'Wardogs hacks support artwork',
+    title: 'Wardogs Hacks Support',
+    caption: 'Delivery, loader and setup support for Wardogs hacks.',
   },
   product: {
-    src: DAYZ_COVER,
+    src: WARDOGS_COVER,
     og: PAGE_OG.product,
-    alt: 'DayZ Aimbot ESP and radar hack product artwork',
-    title: 'DayZ Cheats Features',
-    caption: 'Product details for DayZ Aimbot and ESP.',
+    alt: 'Wardogs Aimbot ESP and radar hack product artwork',
+    title: 'Wardogs Hacks Features',
+    caption: 'Product details for Wardogs Aimbot and ESP.',
   },
 }
 
 export function getGameImage(_slug: string): string {
-  return DAYZ_PRODUCT_COVER
+  return WARDOGS_PRODUCT_COVER
 }
 
 export function getProductHeroImage(_slug: string): string {
-  return DAYZ_PRODUCT_COVER
+  return WARDOGS_PRODUCT_COVER
 }
 
 export function getOgImage(path?: string): string {

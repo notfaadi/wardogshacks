@@ -41,10 +41,10 @@ export function siteIdentityGraph() {
       '@id': `${SITE_URL}/#organization`,
       name: SITE_NAME,
       alternateName: [
-        'DayZ Hacks',
-        'DayZ Standalone Cheats',
-        'dayzcheats.io',
-        'DayZ Aimbot ESP',
+        'Wardogs Hacks',
+        'Wardogs Hacks',
+        'getwardogshacks.org',
+        'Wardogs Aimbot ESP',
       ],
       url: SITE_URL,
       description: SITE_PURPOSE,
@@ -68,9 +68,9 @@ export function siteIdentityGraph() {
       inLanguage: 'en',
       about: {
         '@type': 'Thing',
-        name: 'DayZ cheats',
+        name: 'Wardogs hacks',
         description:
-          'Commercial DayZ cheats for PC — silent aim Aimbot, player ESP, loot ESP, wallhack, radar hack and BattlEye status.',
+          'Commercial Wardogs hacks for PC — silent aim Aimbot, player ESP, loot ESP, wallhack, radar hack and BattlEye status.',
       },
       publisher: { '@id': `${SITE_URL}/#organization` },
     },
@@ -90,7 +90,7 @@ export function webPageNode(seo: PageSeo) {
     inLanguage: 'en',
   } as Record<string, unknown>
   const hasVisibleImage =
-    ['/', '/dayz-cheats', '/forums'].includes(seo.path) || seo.path.startsWith('/forums/')
+    ['/', '/wardogs-hacks', '/forums'].includes(seo.path) || seo.path.startsWith('/forums/')
   // Text pages (faq/support/reviews) still expose OG as WebPage.image for social crawlers
   const hasOgImage = Boolean(seo.image)
   if (hasVisibleImage || hasOgImage) {
@@ -110,19 +110,19 @@ export function productCoreJsonLd() {
   return {
     '@type': 'Product',
     '@id': PRODUCT_ID,
-    name: 'DayZ Cheats',
+    name: 'Wardogs Hacks',
     alternateName: [
-      'DayZ Hacks',
-      'DayZ Standalone Cheats',
-      'DayZ Aimbot',
-      'DayZ ESP',
-      'DayZ Wallhack',
-      'DayZ Radar Hack',
+      'Wardogs Hacks',
+      'Wardogs Hacks',
+      'Wardogs Aimbot',
+      'Wardogs ESP',
+      'Wardogs Wallhack',
+      'Wardogs Radar Hack',
     ],
     description: SITE_PURPOSE,
-    url: `${SITE_URL}/dayz-cheats`,
+    url: `${SITE_URL}/wardogs-hacks`,
     image: [
-      absoluteAsset('/og/dayz-cheats.jpg'),
+      absoluteAsset('/og/wardogs-hacks.jpg'),
       absoluteAsset('/og/home.jpg'),
       absoluteAsset(PAGE_MEDIA.product.image),
       absoluteAsset(PAGE_MEDIA.home.image),
@@ -130,14 +130,14 @@ export function productCoreJsonLd() {
     brand: { '@type': 'Brand', name: SITE_NAME },
     manufacturer: { '@id': `${SITE_URL}/#organization` },
     category: 'PC game software',
-    offers: baseOffer(`${SITE_URL}/dayz-cheats`, 'https://schema.org/InStock'),
+    offers: baseOffer(`${SITE_URL}/wardogs-hacks`, 'https://schema.org/InStock'),
     subjectOf: {
       '@type': 'VideoObject',
-      name: 'DayZ Cheats Aimbot and ESP preview',
+      name: 'Wardogs Hacks Aimbot and ESP preview',
       description:
-        'Preview of DayZ Aimbot, ESP menu, loot highlighting and radar hack features on PC.',
-      thumbnailUrl: absoluteAsset('/media/dayz-video-thumb.jpg'),
-      contentUrl: absoluteAsset('/videos/dayz-preview.mp4'),
+        'Preview of Wardogs Aimbot, ESP menu, loot highlighting and radar hack features on PC.',
+      thumbnailUrl: absoluteAsset('/media/wardogs-video-thumb.jpg'),
+      contentUrl: absoluteAsset('/videos/wardogs-preview.mp4'),
       uploadDate: '2026-09-16',
       inLanguage: 'en',
     },
@@ -149,13 +149,13 @@ export function productDetailJsonLd(status: GameStatus) {
     status === 'Undetected' ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'
   return {
     ...productCoreJsonLd(),
-    url: `${SITE_URL}/dayz-cheats`,
+    url: `${SITE_URL}/wardogs-hacks`,
     image: absoluteAsset(PAGE_MEDIA.product.image),
     about: {
       '@type': 'VideoGame',
-      name: 'DayZ',
-      alternateName: ['DayZ Standalone', 'DayZ SA'],
-      publisher: { '@type': 'Organization', name: 'Bohemia Interactive' },
+      name: 'Wardogs',
+      alternateName: ['Wardogs', 'Wardogs SA'],
+      publisher: { '@type': 'Organization', name: 'Wardogs' },
       gamePlatform: 'PC',
     },
     additionalProperty: [
@@ -169,11 +169,11 @@ export function productDetailJsonLd(status: GameStatus) {
       {
         '@type': 'PropertyValue',
         name: 'Servers',
-        value: 'Official DayZ servers and private servers with common mods',
+        value: 'Official Wardogs servers and private servers with common mods',
       },
       { '@type': 'PropertyValue', name: 'Status', value: status },
     ],
-    offers: baseOffer(`${SITE_URL}/dayz-cheats`, availability),
+    offers: baseOffer(`${SITE_URL}/wardogs-hacks`, availability),
   }
 }
 
@@ -181,7 +181,7 @@ export function productReviewsJsonLd() {
   const aggregate = getReviewsAggregate()
   return {
     ...productCoreJsonLd(),
-    url: `${SITE_URL}/dayz-cheats`,
+    url: `${SITE_URL}/wardogs-hacks`,
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: aggregate.ratingValue,
@@ -194,7 +194,7 @@ export function productReviewsJsonLd() {
       author: { '@type': 'Person', name: review.author },
       datePublished: review.datePublished,
       reviewBody: review.body,
-      name: `${review.author} DayZ Cheats review`,
+      name: `${review.author} Wardogs Hacks review`,
       reviewRating: {
         '@type': 'Rating',
         ratingValue: String(review.rating),

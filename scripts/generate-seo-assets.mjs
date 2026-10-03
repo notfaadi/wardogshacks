@@ -34,17 +34,17 @@ async function exists(path) {
 }
 
 const requiredBattlelog = [
-  join(mediaDir, 'dayz-hero-full.webp'),
-  join(mediaDir, 'dayz-cover.webp'),
-  join(mediaDir, 'dayz-box.jpg'),
-  join(mediaDir, 'dayz-menu.gif'),
-  join(mediaDir, 'dayz-esp-gameplay.gif'),
-  join(mediaDir, 'dayz-video-thumb.jpg'),
+  join(mediaDir, 'wardogs-hero-full.webp'),
+  join(mediaDir, 'wardogs-cover.webp'),
+  join(mediaDir, 'wardogs-box.jpg'),
+  join(mediaDir, 'wardogs-menu.gif'),
+  join(mediaDir, 'wardogs-esp-gameplay.gif'),
+  join(mediaDir, 'wardogs-video-thumb.jpg'),
 ]
 
 for (const path of requiredBattlelog) {
   if (!(await exists(path))) {
-    throw new Error(`Missing DayZ media asset (do not regenerate): ${path}`)
+    throw new Error(`Missing Wardogs media asset (do not regenerate): ${path}`)
   }
 }
 
@@ -72,7 +72,7 @@ function overlaySvg(width, height, eyebrow, title, subtitle) {
         )
         .join('\n')}
       <text x="64" y="480" fill="#c9bdd2" font-size="26" font-family="Arial, sans-serif">${escapeXml(subtitle)}</text>
-      <text x="64" y="560" fill="#9299a3" font-size="20" font-family="Arial, sans-serif">dayzcheats.io</text>
+      <text x="64" y="560" fill="#9299a3" font-size="20" font-family="Arial, sans-serif">getwardogshacks.org</text>
     </svg>
   `)
 }
@@ -105,53 +105,53 @@ function loadForumMeta(src) {
   }))
 }
 
-const heroFull = join(mediaDir, 'dayz-hero-full.webp')
-const coverArt = join(mediaDir, 'dayz-cover.webp')
-const espGif = join(mediaDir, 'dayz-esp-gameplay.gif')
-const menuGif = join(mediaDir, 'dayz-menu.gif')
-const videoThumb = join(mediaDir, 'dayz-video-thumb.jpg')
+const heroFull = join(mediaDir, 'wardogs-hero-full.webp')
+const coverArt = join(mediaDir, 'wardogs-cover.webp')
+const espGif = join(mediaDir, 'wardogs-esp-gameplay.gif')
+const menuGif = join(mediaDir, 'wardogs-menu.gif')
+const videoThumb = join(mediaDir, 'wardogs-video-thumb.jpg')
 
 const staticOg = [
   {
     file: 'home.jpg',
     source: heroFull,
-    eyebrow: 'DAYZ CHEATS',
-    title: 'DayZ Aimbot, ESP & Radar Hack',
-    subtitle: 'DayZ cheats from $35 · live BattlEye status',
+    eyebrow: 'WARDOGS HACKS',
+    title: 'Wardogs Aimbot, ESP & Radar Hack',
+    subtitle: 'Wardogs hacks from $35 · live BattlEye status',
   },
   {
-    file: 'dayz-cheats.jpg',
+    file: 'wardogs-hacks.jpg',
     source: coverArt,
     eyebrow: 'PRODUCT DETAILS',
-    title: 'DayZ Aimbot, ESP & Radar',
+    title: 'Wardogs Aimbot, ESP & Radar',
     subtitle: 'Features, BattlEye status and price',
   },
   {
     file: 'forums.jpg',
     source: menuGif,
     eyebrow: 'GUIDES',
-    title: 'DayZ Cheats Setup Forums',
+    title: 'Wardogs Hacks Setup Forums',
     subtitle: 'Aimbot, ESP, loader and BattlEye guides',
   },
   {
     file: 'reviews.jpg',
     source: espGif,
     eyebrow: 'REVIEWS',
-    title: 'DayZ Cheats Buyer Reviews',
-    subtitle: 'Real DayZ Aimbot and ESP feedback',
+    title: 'Wardogs Hacks Buyer Reviews',
+    subtitle: 'Real Wardogs Aimbot and ESP feedback',
   },
   {
     file: 'faq.jpg',
     source: menuGif,
     eyebrow: 'FAQ',
-    title: 'DayZ Cheats FAQ',
+    title: 'Wardogs Hacks FAQ',
     subtitle: 'Price, BattlEye status and setup answers',
   },
   {
     file: 'support.jpg',
     source: videoThumb,
     eyebrow: 'SUPPORT',
-    title: 'DayZ Cheats Support',
+    title: 'Wardogs Hacks Support',
     subtitle: 'Loader, delivery and Windows help',
   },
   {
@@ -159,14 +159,14 @@ const staticOg = [
     source: heroFull,
     eyebrow: 'POLICY',
     title: 'Privacy Policy',
-    subtitle: 'How dayzcheats.io handles order data',
+    subtitle: 'How getwardogshacks.org handles order data',
   },
   {
     file: 'terms.jpg',
     source: heroFull,
     eyebrow: 'POLICY',
     title: 'Terms of Use',
-    subtitle: 'License rules for DayZ Cheats',
+    subtitle: 'License rules for Wardogs Hacks',
   },
   {
     file: 'refunds.jpg',
@@ -192,8 +192,8 @@ if (!forums.length) {
   for (const slug of loadForumSlugs(blogsSrc)) {
     forums.push({
       slug,
-      title: `DayZ Cheats ${slug}`,
-      description: 'DayZ cheats guide on dayzcheats.io',
+      title: `Wardogs Hacks ${slug}`,
+      description: 'Wardogs hacks guide on getwardogshacks.org',
     })
   }
 }
@@ -210,9 +210,9 @@ for (const forum of forums) {
   await writeOgJpeg(
     out,
     source,
-    'DAYZ GUIDE',
+    'WARDOGS GUIDE',
     forum.title.replace(/\s*\|\s*.*$/, '').slice(0, 48),
-    'DayZ cheats · dayzcheats.io',
+    'Wardogs hacks · getwardogshacks.org',
   )
   created.push(file)
 }
@@ -236,9 +236,9 @@ function fillerSvg(width, height, eyebrow, title, subtitle) {
 }
 
 for (const [name, eyebrow, title, subtitle] of [
-  ['dayz-tactical-art.jpg', 'DAYZ STANDALONE', 'DayZ Cheats', 'Aimbot · ESP · Loot ESP · BattlEye'],
-  ['dayz-control-art.jpg', 'DAYZ · WINDOWS PC', 'DayZ ESP & Radar', 'Built for DayZ survival runs'],
-  ['dayz-home-art.jpg', 'dayzcheats.io', 'DayZ Cheats', 'Aimbot, ESP, wallhack and radar hack'],
+  ['wardogs-tactical-art.jpg', 'WARDOGS', 'Wardogs Hacks', 'Aimbot · ESP · Loot ESP · BattlEye'],
+  ['wardogs-control-art.jpg', 'WARDOGS · WINDOWS PC', 'Wardogs ESP & Radar', 'Built for Wardogs survival runs'],
+  ['wardogs-home-art.jpg', 'getwardogshacks.org', 'Wardogs Hacks', 'Aimbot, ESP, wallhack and radar hack'],
 ]) {
   const path = join(mediaDir, name)
   if (

@@ -1,6 +1,5 @@
-﻿# Cloudflare Workers + static assets — required so CI `npx wrangler deploy` succeeds.
-# (Dashboard is locked to that command; `wrangler pages deploy` is not used.)
-name = "wardogsqrh"
+﻿# Cloudflare Workers + static assets — CI runs `npx wrangler deploy`.
+name = "wardogshacks"
 main = "workers/site.js"
 compatibility_date = "2026-09-12"
 
@@ -9,13 +8,14 @@ compatibility_date = "2026-09-12"
 [build]
 command = "npm run build"
 
-[[routes]]
-pattern = "getwardogshacks.org"
-custom_domain = true
-
-[[routes]]
-pattern = "www.getwardogshacks.org"
-custom_domain = true
+# Custom domains (getwardogshacks.org) are NOT declared here — Wrangler fails
+# deploy if the zone is missing from this Cloudflare account. After you add the
+# domain in Cloudflare (DNS → proxied orange cloud), attach it in the dashboard:
+# Workers & Pages → wardogshacks → Settings → Domains & Routes → Add domain.
+# Then you can optionally restore:
+#   [[routes]]
+#   pattern = "getwardogshacks.org"
+#   custom_domain = true
 
 [assets]
 directory = "./dist"
